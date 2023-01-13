@@ -28,7 +28,7 @@ document
   .querySelector('form.feedback-form')
   .addEventListener('submit', event => {
     event.preventDefault();
-    localStorage.clear();
+    localStorage.removeItem('feedback-form-state');
     formState.email = emailField.value;
     formState.message = messageField.value;
     console.log(formState);
